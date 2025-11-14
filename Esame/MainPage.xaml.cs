@@ -5,7 +5,7 @@ namespace Esame
 {
     public partial class MainPage : ContentPage
     {
-        RestService restService;
+        RestService service;
         List<Product> Items;
 
 
@@ -13,7 +13,7 @@ namespace Esame
         public MainPage()
         {
             InitializeComponent();
-            var service = new RestService(); 
+            service = new RestService(); 
                 BindingContext = this;
         }
 
@@ -26,7 +26,7 @@ namespace Esame
         protected async override void OnNavigatedTo(NavigationEventArgs args)
         {
             base.OnNavigatedTo(args);
-            var products = await ServiceCollection.GetProductsAsync();
+            var products = await service.GetProductsAsync();
             foreach (var p in products)
             {
                 Items.Add(p);
