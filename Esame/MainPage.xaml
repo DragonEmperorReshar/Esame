@@ -18,6 +18,8 @@
                         <Grid RowDefinitions="2" ColumnDefinitions="2">
 
                             <Label Text = "{Binding BaseAddress}" WidthRequest="100" Grid.Row="1" Grid.Column="0"/>
+                            <Button Text="Aggiungi Al Carrello" WidthRequest="100" Grid.Row="2" Grid.Column="0"/>
+                            
 
                         </Grid>
                     </DataTemplate>
